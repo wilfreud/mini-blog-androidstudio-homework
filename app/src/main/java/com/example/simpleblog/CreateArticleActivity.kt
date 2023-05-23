@@ -5,6 +5,7 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import android.widget.Button
 import android.widget.EditText
+import android.widget.Toast
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import java.text.SimpleDateFormat
 import java.util.*
@@ -24,18 +25,24 @@ class CreateArticleActivity : AppCompatActivity() {
         submitButton = findViewById(R.id.submitButton)
 
         submitButton.setOnClickListener {
-            val title = titleEditText.text.toString()
-            val content = contentEditText.text.toString()
-            val updatedAt = getCurrentDate() // Get the current date
+            val title = titleEditText.text.toString().trim()
+            val content = contentEditText.text.toString().trim()
 
-            // Insert the article into the database
-            val dbHelper = DatabaseHelper(this)
-            val article = Article(title, content, updatedAt, 0) // Create Article instance with current date and empty id
-            dbHelper.insertArticle(article)
+            if (title.isEmpty() || content.isEmpty()) {
+                Toast.makeText(this, "Remplissez tous les champs", Toast.LENGTH_SHORT).show()
+            } else {
+                val updatedAt = getCurrentDate() // Get the current date
 
-            // Set the result as OK and finish the activity
-            setResult(RESULT_OK)
-            finish()
+                // Insert the article into the database
+                val dbHelper = DatabaseHelper(this)
+                val article = Article(title, content, updatedAt, 0) // Create Article instance with current date and empty id
+                dbHelper.insertArticle(article)
+
+                // Set the result as OK and finish the activity
+                setResult(RESULT_OK)
+                Toast.makeText(this, "Article ajouté", Toast.LENGTH_SHORT).show()
+                finish()
+            }
         }
 
         val returnButton = findViewById<FloatingActionButton>(R.id.returnButton)

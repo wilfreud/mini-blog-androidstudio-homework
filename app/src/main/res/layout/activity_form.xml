@@ -24,6 +24,7 @@
         android:layout_below="@id/page_name"
         android:layout_marginTop="16dp"
         android:text="@string/add_article_text"
+        style="@style/Titre4"
         android:gravity="center"
         android:textStyle="bold" />
 
@@ -42,6 +43,7 @@
         android:inputType="textAutoComplete" />
 
     <!-- Text Area Input -->
+
     <EditText
         android:id="@+id/post_content"
         android:layout_width="match_parent"
@@ -54,7 +56,8 @@
         android:hint="@string/post_input_content_placeholder"
         tools:ignore="VisualLintTextFieldSize"
         android:importantForAutofill="no"
-        android:inputType="textAutoCorrect" />
+        android:inputType="textAutoCorrect|textMultiLine" />
+
 
     <!-- Submit Button -->
     <Button

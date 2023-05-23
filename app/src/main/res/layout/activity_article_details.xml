@@ -11,8 +11,8 @@
         style="@style/Titre1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="1dp"
-        android:layout_marginTop="64dp"
+        android:padding="4dp"
+        android:layout_marginTop="16dp"
         android:text="@string/article_item_title_placeholder"
         tools:ignore="TextSizeCheck" />
 
@@ -54,13 +54,19 @@
         android:background="@android:color/black" />
 
     <!-- Article Content -->
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/horizontalDivider">
+
     <TextView
         android:id="@+id/article_details_content"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/horizontalDivider"
         android:hint="@string/post_input_content_placeholder"
         android:padding="16dp" />
+    </ScrollView>
 
     <!-- Return Button -->
     <com.google.android.material.floatingactionbutton.FloatingActionButton

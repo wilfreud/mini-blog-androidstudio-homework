@@ -1,25 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="vertical"
-    android:padding="16dp">
+    app:cardElevation="8dp"
+    app:cardCornerRadius="8dp">
 
-    <TextView
-        android:id="@+id/articleItemTitle"
+    <LinearLayout
+        android:background="@color/tertiary_color"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/article_item_title_placeholder"
-        style="@style/Titre1"
-        />
+        android:orientation="vertical"
+        android:layout_marginVertical="4dp"
+        android:padding="16dp">
 
-    <TextView
-        android:id="@+id/articleItemContent"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:maxLines="4"
-        android:ellipsize="end"
-        android:text="@string/article_item_content_placeholder"
-        style="@style/Text1" />
+        <TextView
+            android:id="@+id/articleItemTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/article_item_title_placeholder"
+            style="@style/Titre3" />
 
-</LinearLayout>
+        <TextView
+            android:id="@+id/articleItemContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="4"
+            android:ellipsize="end"
+            android:text="@string/article_item_content_placeholder"
+            style="@style/Text1" />
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
