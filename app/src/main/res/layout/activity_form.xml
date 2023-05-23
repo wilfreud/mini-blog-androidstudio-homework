@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/secondary_color"
+    android:padding="16dp">
+
+    <!-- Title TextView -->
+    <TextView
+        android:id="@+id/page_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/app_name"
+        style="@style/Titre2"
+        android:textColor="@color/primary_color"
+        android:textStyle="bold" />
+
+    <!-- Form Title -->
+    <TextView
+        android:id="@+id/form_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/page_name"
+        android:layout_marginTop="16dp"
+        android:text="@string/add_article_text"
+        android:gravity="center"
+        android:textStyle="bold" />
+
+    <!-- Text Input -->
+    <EditText
+        android:id="@+id/post_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/form_title"
+        android:layout_marginTop="16dp"
+        android:hint="@string/post_input_title_placeholder"
+        android:minHeight="48dp"
+        android:padding="10dp"
+        tools:ignore="VisualLintTextFieldSize"
+        android:autofillHints=""
+        android:inputType="textAutoComplete" />
+
+    <!-- Text Area Input -->
+    <EditText
+        android:id="@+id/post_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/post_title"
+        android:layout_marginTop="16dp"
+        android:padding="10dp"
+        android:minLines="4"
+        android:gravity="top"
+        android:hint="@string/post_input_content_placeholder"
+        tools:ignore="VisualLintTextFieldSize"
+        android:importantForAutofill="no"
+        android:inputType="textAutoCorrect" />
+
+    <!-- Submit Button -->
+    <Button
+        android:id="@+id/submitButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/primary_color"
+        android:textColor="@color/tertiary_color"
+        android:layout_below="@id/post_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/add_post_btn"
+        tools:ignore="VisualLintButtonSize" />
+
+    <!-- Return Button -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/returnButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="@color/primary_color"
+        android:elevation="6dp"
+        android:minHeight="48dp"
+        android:src="@drawable/ic_close"
+        android:textAlignment="center"
+        android:contentDescription="Close" />
+
+</RelativeLayout>

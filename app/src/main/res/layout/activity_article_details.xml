@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/secondary_color">
+
+    <!-- Article Title -->
+    <TextView
+        android:id="@+id/articleTitle"
+        style="@style/Titre1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="1dp"
+        android:layout_marginTop="64dp"
+        android:text="@string/article_item_title_placeholder"
+        tools:ignore="TextSizeCheck" />
+
+    <!-- Author and Date Group -->
+    <LinearLayout
+        android:id="@+id/authorDateGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/articleTitle"
+        android:padding="2dp">
+
+        <!-- Author Text -->
+        <TextView
+            android:id="@+id/author"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingLeft="4dp"
+            android:text="@string/article_author_prefix" />
+
+        <!-- Date Text -->
+        <TextView
+            android:id="@+id/date"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="@string/date_placeholder"
+            android:gravity="end" />
+
+    </LinearLayout>
+
+    <!-- Horizontal Divider Line -->
+    <View
+        android:id="@+id/horizontalDivider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/authorDateGroup"
+        android:background="@android:color/black" />
+
+    <!-- Article Content -->
+    <TextView
+        android:id="@+id/article_details_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/horizontalDivider"
+        android:hint="@string/post_input_content_placeholder"
+        android:padding="16dp" />
+
+    <!-- Return Button -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/returnButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="16dp"
+        android:backgroundTint="@color/primary_color"
+        android:elevation="6dp"
+        android:src="@drawable/ic_return" />
+
+</RelativeLayout>

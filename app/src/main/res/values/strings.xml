@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">
+        SimpleBlog
+    </string>
+
+    <string name="add_post_btn">
+        <style name="Titre2">Ajouter</style>
+    </string>
+
+    <string name="add_article_text">
+        <style name="Titre2">Ajouter un article</style>
+    </string>
+
+    <string name="article_author_prefix">Ecrit par</string>
+
+    <string name="post_input_title_placeholder">Titre</string>
+    <string name="post_input_content_placeholder">Contenu</string>
+
+    <string name="article_infos_title_placeholder">
+        <style name="Titre1">Article 1</style>
+    </string>
+
+    <string name="article_item_title_placeholder">
+        <style name="Titre3">Article 1</style>
+    </string>
+
+    <string name="date_placeholder">DD/MM/YYYY</string>
+
+    <string name="article_item_content_placeholder">
+        <style name="Text2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod auctor vestibulum. Donec a lobortis arcu. Donec tempor ipsum eget justo tristique rutrum. Nulla pretium feugiat elit. Nullam eget semper augue. Integer diam felis, commodo nec ligula nec, scelerisque aliquet urna. Nam sapien metus, varius sed massa ut, ultrices iaculis odio. Duis imperdiet ex augue, vitae suscipit eros pretium at. Fusce ac orci et sem tristique faucibus. Donec luctus, ligula pellentesque lobortis sagittis, sapien nibh maximus lacus, id scelerisque felis turpis ut ligula. Duis tincidunt non lorem quis dictum. In non nisl nec ante venenatis gravida.</style>
+    </string>
+</resources>
